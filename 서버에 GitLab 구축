@@ -88,7 +88,15 @@ docker-compose file의 GITLAB_OMNIBUS_CONFIG에 gitlab을 노출시킬 external-
 설정하는 것이다. 그럼 docker-compose.yml의 설정에 맞게 포트 번호를 포워딩 해준다.
 shm-size( shared memory) 도 설정해주었다. 이 사이즈가 너무 작다면 여러 문제가 발생하는 듯하다.
 
+git을 쓰면 repository를 clone 할 일이 많다. 그 때, repository 주소를 정확히 알아야 clone 할 수 있는데, external-url이 그 역할이다.
 
 
+https
+와 http -> https 리다이렉트
 
+Nginx
+결론적으로는 웹 서버임
+우리가 얘기하는 웹 서버는 html, css, js, 이미지 등의 정적 파일을 응답하는 (real) 웹 서버와, 애플리케이션 로직을 실행하는 WAS로 나뉜다.
+그래서 응답 흐름은 데이터베이스 -> WAS -> 웹 서버 -> 클라이언트 순으로 진행된다.
+참고: https://blog.naver.com/gi_balja/223028077537
 
